@@ -71,7 +71,7 @@ def handCheck():
     cv2.putText(frame, "Place your hand in blue and hit Spacebar", (20,25),cv2.FONT_HERSHEY_COMPLEX, 0.8, (255,0,0))
     # print("Aala ithe")
 
-def gesFun():
+def gesFun(nxt):
     global image_counter
     if image_counter != 200:
         image_name = "{}.png".format(image_counter)
@@ -79,7 +79,7 @@ def gesFun():
         image_counter += 1
         time.sleep(0.050)
     else:
-        cv2.putText(frame, "Hit Spacebar To Continue", (20,25),cv2.FONT_HERSHEY_COMPLEX, 0.8, (255,0,0))
+        cv2.putText(frame, "Hit Spacebar To Continue, Next is {}".format(nxt), (20,25),cv2.FONT_HERSHEY_COMPLEX, 0.8, (255,0,0))
 
 def br():
     global lp
@@ -102,43 +102,43 @@ while lp:
     elif gesture_counter == 1:
         path = dir1
         overlap('emoji/fist.jpg')
-        gesFun()
+        gesFun("one")
     elif gesture_counter == 2:
         path = dir2
         overlap('emoji/one.jpg')
-        gesFun()
+        gesFun("two")
     elif gesture_counter == 3:
         path = dir3
         overlap('emoji/two.jpg')
-        gesFun()
+        gesFun("three")
     elif gesture_counter == 4:
         path = dir4
         overlap('emoji/three.jpg')
-        gesFun()
+        gesFun("four")
     elif gesture_counter == 5:
         path = dir5
         overlap('emoji/four.jpg')
-        gesFun()
+        gesFun("five")
     elif gesture_counter == 6:
         path = dir6
         overlap('emoji/five.jpg')
-        gesFun()
+        gesFun("spiderman")
     elif gesture_counter == 7:
         path = dir7
         overlap('emoji/spiderman.jpg')
-        gesFun()
+        gesFun("rock sign")
     elif gesture_counter == 8:
         path = dir8
         overlap('emoji/rock.jpg')
-        gesFun()
+        gesFun("thumb up")
     elif gesture_counter == 9:
         path = dir9
         overlap('emoji/tup.jpg')
-        gesFun()
+        gesFun("ok")
     elif gesture_counter == 10:
         path = dir10
         overlap('emoji/ok.jpg')
-        gesFun()
+        gesFun("done Thank you!")
     elif gesture_counter == 11:
         br()
 
@@ -159,3 +159,4 @@ cam.release()
 cv2.destroyAllWindows()
 
 print("Thanks again, I really appreciate your help!! :)")
+time.sleep(5)
