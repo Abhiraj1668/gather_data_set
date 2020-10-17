@@ -5,6 +5,8 @@ Thanks for helping me to gather data-set for my project.
 Make sure your device has python 3.8 installed.
 Here are the steps you will need to follow
 
+If you have opencv installed you can skip to step 3
+
 1) We will create a virtual environment for this task. Once you have downloaded the repository, create a virtual environment in the folder containing the python file.
 Use following steps to create a virtual environment.
 	a) open command prompt/terminal
