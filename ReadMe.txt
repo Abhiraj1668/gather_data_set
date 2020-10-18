@@ -19,7 +19,7 @@ Use following steps to create a virtual environment.
 
 2) Now we will install opencv package required for this file.
 Use the following command to install opencv
-	"pip install opencv-pyhton"
+	"pip install opencv-python"
 NOTE: Latest python version (3.9.0) is currently not compatible with this command.
 
 3) Now that everything is set, we can now run the main python script.
