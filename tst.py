@@ -41,11 +41,11 @@ if not os.path.exists(dir9):
 if not os.path.exists(dir10):
     os.makedirs(dir10)
 
-cam = cv2.VideoCapture(1)
+cam = cv2.VideoCapture(0)
 ret, frame = cam.read()
 if not ret:
     cam.release()
-    cam = cv2.VideoCapture(0)
+    cam = cv2.VideoCapture(1)
 
 image_counter = 0
 gesture_counter = 0
